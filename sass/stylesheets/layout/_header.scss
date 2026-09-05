@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use "../abstracts";
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+  &__logo {
+    img {
+      width: 140px;
+    }
+  }
+
+  &__nav {
+    margin-left: 70px;
+
+    &-home,
+    a:hover {
+      position: relative;
+      text-decoration: none;
+      color: abstracts.$brand-color;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: abstracts.$brand-color;
+        width: 80%;
+        bottom: -10px;
+        left: 10%;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    li {
+      list-style: none;
+    }
+  }
+
+  &__login {
+    margin-left: auto;
+  }
+
+  &-shop-link {
+    img {
+      width: 20px;
+    }
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      background-color: abstracts.$brand-color;
+      top: -10px;
+      right: -5px;
+      border-radius: 10px;
+    }
+  }
+
+  &-sign-up {
+    background-color: abstracts.$brand-color;
+    padding: 10px 25px;
+    border-radius: 15%;
+  }
+}

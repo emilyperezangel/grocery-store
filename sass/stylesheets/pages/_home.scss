@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+@use "../abstracts";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  &__content {
+    width: 50%;
+    &_title {
+      margin-bottom: 8px;
+    }
+
+    &_description {
+      width: 80%;
+      margin-bottom: 36px;
+    }
+
+    &_search {
+      display: flex;
+      input {
+        padding: 12px 18px;
+        background-color: abstracts.$light-grey_2;
+        width: 60%;
+        border: 0;
+        border-radius: 8px 0 0 8px;
+      }
+      &-button {
+        background-color: abstracts.$brand-color;
+        border: 0;
+        border-radius: 0 8px 8px 0;
+        width: 8%;
+        cursor: pointer;
+        img {
+          width: 16px;
+        }
+      }
+      margin-bottom: 30px;
+    }
+
+    &_list {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        gap: 10px 20px;
+        li {
+          list-style: none;
+          display: flex;
+          gap: 5px;
+          img {
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  &__background {
+    width: 60%;
+    img {
+      max-width: 100%;
+    }
+    position: absolute;
+    top: 30px;
+    right: 120px;
+  }
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  margin-left: 20px;
+  background-color: rgba(abstracts.$light-grey, 0.8);
+  backdrop-filter: blur(8px);
+  .category {
+    &__icon {
+      width: 70px;
+    }
+  }
+}
